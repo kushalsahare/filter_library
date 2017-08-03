@@ -1,0 +1,6 @@
+{
+  "test_basic1.py": true, 
+  "test_basic1.py::BasicTestSuite::test_min": true, 
+  "test_rf.py::RFTestSuite::test_max": true, 
+  "test_rf.py::RFTestSuite::test_min": true
+}
