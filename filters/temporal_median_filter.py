@@ -3,6 +3,7 @@
 from collections import deque
 import numpy as np
 
+
 class TemporalMedianFilter():
     """Temporal Median Filter Class
        The temporal median filter class returns the median of the current and
@@ -42,7 +43,7 @@ class TemporalMedianFilter():
         self.D = D
         self.data = np.zeros(N)
         
-        self.data_queue = deque([], self.D+1);
+        self.data_queue = deque([], self.D+1)
 
     def update(self, data):
         """
@@ -65,16 +66,14 @@ class TemporalMedianFilter():
 
 
 if __name__ == "__main__":
-
-  
-    data = [ [0., 1., 2., 1., 3.],
-             [1., 5., 7., 1., 3.],
-             [2., 3., 4., 1., 0.],
-             [3., 3., 3., 1., 3.],
-             [10.,2., 4., 0., 0.]]
+    data = [[0., 1., 2., 1., 3.],
+            [1., 5., 7., 1., 3.],
+            [2., 3., 4., 1., 0.],
+            [3., 3., 3., 1., 3.],
+            [10.,2., 4., 0., 0.]]
     tm_filter = TemporalMedianFilter(len(data[0]),3)
+
     for i in range(len(data)):
-            #print data
-            data_filtered= tm_filter.update(data[i])
-            print data_filtered
-            #print "----------"
+        data_filtered= tm_filter.update(data[i])
+        print data_filtered
+        # print "----------"
